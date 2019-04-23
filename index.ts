@@ -1,5 +1,5 @@
 import * as jsonServer from 'json-server'
-import { mapRoutes } from './app/routes'
+import { mapRoutes } from './routes'
 
 const server = jsonServer.create()
 const router = jsonServer.router('./db/db.json')
