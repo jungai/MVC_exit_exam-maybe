@@ -1,7 +1,5 @@
-import { Request, Response } from 'express'
 import * as jsonServer from 'json-server'
-import { ROUTES } from './routes'
-import { User } from './controller/user'
+import { mapRoutes } from './routes'
 
 const server = jsonServer.create()
 const router = jsonServer.router('../db/db.json')
@@ -14,7 +12,7 @@ const middlewaresOptions: jsonServer.MiddlewaresOptions = {
     static: 'assets',
 }
 
-const port = process.env.PORT || 3000
+const port: number = 3000
 
 const middlewares = jsonServer.defaults(middlewaresOptions)
 
@@ -22,7 +20,9 @@ server.use(jsonServer.bodyParser)
 
 server.use(middlewares)
 
-server.get(ROUTES.USER, User)
+// mapRoutes in routes
+mapRoutes(server)
+
 
 server.use(router);
 
