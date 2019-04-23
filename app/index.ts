@@ -1,5 +1,7 @@
 import { Request, Response } from 'express'
 import * as jsonServer from 'json-server'
+import { ROUTES } from './routes'
+import { User } from './controller/user'
 
 const server = jsonServer.create()
 const router = jsonServer.router('../db/db.json')
@@ -20,9 +22,7 @@ server.use(jsonServer.bodyParser)
 
 server.use(middlewares)
 
-server.get('/', (_req: Request, res: Response) => {
-  res.send('hello')
-})
+server.get(ROUTES.USER, User)
 
 server.use(router);
 
