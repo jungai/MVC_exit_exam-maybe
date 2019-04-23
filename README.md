@@ -1,4 +1,4 @@
-## mock_MVC_nodejs(for exit exam)
+## mock_MVC_nodejs
 
 ### List
 1. node
