@@ -6,7 +6,5 @@ function allRoutes(r: Application) {
   r.get('/users', User)
 }
 
-export const mapRoutes = (s: Application ) => {
+export const mapRoutes = (s: Application ) => allRoutes(s)
 
-  return allRoutes(s)
-}
