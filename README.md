@@ -1,10 +1,10 @@
-# 🔧 Not finish yet 
 ## MVC_exit_exam-maybe
 
 ### List
-1. json-server (mock database)
-2. typescript
-3. nodemon
+1. node
+2. json-server (mock database)
+3. typescript
+4. nodemon
 
 ### Install
 1. 📄 after clone this repo 
