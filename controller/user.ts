@@ -3,5 +3,5 @@ import { getUser } from '../model/user'
 
 export const User = (_req: Request, res: Response, _next: NextFunction) => {
   const users = getUser()
-  res.status(200).json({ msg: 'hello', result: users })
+  res.render('index', { msg: 'test mvc', result: users})
 }
