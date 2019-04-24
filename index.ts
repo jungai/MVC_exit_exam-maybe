@@ -16,6 +16,8 @@ const port: number = 3000
 
 const middlewares = jsonServer.defaults(middlewaresOptions)
 
+server.set('view engine', 'ejs')
+
 server.use(jsonServer.bodyParser)
 
 server.use(middlewares)
