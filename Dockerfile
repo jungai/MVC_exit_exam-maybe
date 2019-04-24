@@ -1,12 +1,9 @@
 FROM node:10-alpine
 WORKDIR /usr/
 
-COPY package.json ./
-COPY yarn.lock ./
+COPY . ./
 
 RUN yarn
-
-COPY . ./
 
 RUN yarn build
 
