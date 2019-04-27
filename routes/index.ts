@@ -1,11 +1,11 @@
 import { Application } from 'express'
-import { User } from '../controller/user'
+import { getDataItems } from '../controller/items'
 
 function allRoutes(r: Application) {
   /**
    * add route here
    */
-  r.get('/', User)
+  r.get('/', getDataItems)
 }
 
 export const mapRoutes = (s: Application ) => allRoutes(s)
